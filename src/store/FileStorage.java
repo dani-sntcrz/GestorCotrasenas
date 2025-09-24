@@ -24,7 +24,6 @@ public class FileStorage {
                 return true;
             }
 
-            // Verificar contra el hash almacenado
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 String storedHash = reader.readLine();
                 return HashUtils.verifyPassword(password, storedHash);
